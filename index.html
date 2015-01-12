@@ -4,101 +4,92 @@
 	<meta charset="UTF-8">
 	<title>shows</title>
 	<style type="text/css">
-		table {
-			border-collapse: collapse;
+		body {
+			font-family: Verdana;
+			background-color: rgba(26, 83, 94, 0.55) ;
 		}
-		tr:hover {
-			background-color: silver;
+		table {
+			background-color: white;
+			width: 95%;
+			margin: 0 auto;
+		}
+		tr {
+			border-bottom: 0.3em;
+		}
+		thead th {
+			background-color: rgba(43, 51, 53, 0.98) ;
+			color: #efefef;
+		}
+		tbody tr:hover {
+			background-color: #efefef;
+		}
+		td {
+			vertical-align: top;
+			padding: 0.1em 0.3em;
+		}
+		td:nth-child(1),
+		td:nth-child(2) {
+			text-align: center;
+		}
+		td:nth-child(3),
+		td:nth-child(4) {
+			text-align: right;
+		}
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			color: rgb(30, 20, 166);
 		}
 	</style>
 </head>
-<body data-shows="%5B%7B%22text%22%3A%222000%27S%20-%20R%26B%20AND%20HIP%20HOP%20%27DANCE%20PARTY%27%20!%22%2C%22href%22%3A%22%2Fevent%2F719709-2000s-r-b-hip-hop-dance-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747065-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22TRIBUTO%3A%20LOS%20FABULOSOS%20CADILLACS%22%2C%22href%22%3A%22%2Fevent%2F708737-tributo-los-fabulosos-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748959-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22WILD%20EARTH%20(CD%20RELEASE)%22%2C%22href%22%3A%22%2Fevent%2F732993-wild-earth-cd-release-phoenix%2F%22%7D%2C%7B%22text%22%3A%22BRIAN%20CHARTRAND%20%26%20FRIENDS%22%2C%22href%22%3A%22%2Fevent%2F736517-brian-chartrand-friends-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22MOTOWN%20ON%20MONDAYS%5C%22%20WITH%20DJ%20TRICKY%20T%2C%20PICKSTER%20%26%20M2.%20HOSTED%20BY%20Q.%20WITH%20LIVE%20ART%20BY%20DUMP...%22%2C%22href%22%3A%22%2Fevent%2F744945-motown-on-mondays-dj-tricky-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SOME%20DARK%20HOLLOW%22%2C%22href%22%3A%22%2Fevent%2F730751-some-dark-hollow-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SIDEPONY%20NEW%20YEAR%20SPECTACULAR%3A%20FEAST%20OF%20THE%20SEVEN%20HERBS%20W%2F%20TREASUREFRUIT%22%2C%22href%22%3A%22%2Fevent%2F744041-sidepony-new-year-spectacular-phoenix%2F%22%7D%2C%7B%22text%22%3A%22CHICHA%20DUST%22%2C%22href%22%3A%22%2Fevent%2F739713-chicha-dust-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22LIFE%27S%20A%20DRAG.%20PARTY%20LIKE%20A%20QUEEN%5C%22%22%2C%22href%22%3A%22%2Fevent%2F745891-lifes-drag-party-like-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20BLUNT%20CLUB%22%2C%22href%22%3A%22%2Fevent%2F747989-blunt-club-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747067-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%27LIVE%27%20LUCHA%20LIBRE%20WRESTLING%22%2C%22href%22%3A%22%2Fevent%2F742081-live-lucha-libre-wrestling-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748961-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SURF%22%2C%22href%22%3A%22%2Fevent%2F738463-surf-phoenix%2F%22%7D%2C%7B%22text%22%3A%22AESOP%20ROCK%20AND%20ROB%20SONIC%22%2C%22href%22%3A%22%2Fevent%2F720847-aesop-rock-rob-sonic-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22MOTOWN%20ON%20MONDAYS%5C%22%20WITH%20DJ%20TRICKY%20T%2C%20PICKSTER%20%26%20M2.%20HOSTED%20BY%20Q.%20WITH%20LIVE%20ART%20BY%20DUMP...%22%2C%22href%22%3A%22%2Fevent%2F744947-motown-on-mondays-dj-tricky-phoenix%2F%22%7D%2C%7B%22text%22%3A%22BIGFOOT%20WALLACE%22%2C%22href%22%3A%22%2Fevent%2F745999-bigfoot-wallace-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20DELTA%20FIFTHS%22%2C%22href%22%3A%22%2Fevent%2F751455-delta-fifths-phoenix%2F%22%7D%2C%7B%22text%22%3A%22MYRLIN%20HEPWORTH%22%2C%22href%22%3A%22%2Fevent%2F736549-myrlin-hepworth-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22LIFE%27S%20A%20DRAG.%20PARTY%20LIKE%20A%20QUEEN%5C%22%22%2C%22href%22%3A%22%2Fevent%2F745893-lifes-drag-party-like-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20BLACK%20MOODS%22%2C%22href%22%3A%22%2Fevent%2F738471-black-moods-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DJ%20MY%20FUNERAL%22%2C%22href%22%3A%22%2Fevent%2F745921-dj-my-funeral-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747069-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22PHOENIX%20ROCK%20LOTTERY%20%3A%2025%20MUSICIANS%20START%20THE%20DAY%2C%205%20BANDS%20END%20IT!%22%2C%22href%22%3A%22%2Fevent%2F733367-phoenix-rock-lottery-25-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748969-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22OWL%20%26%20PENNY%20CD%20RELEASE%22%2C%22href%22%3A%22%2Fevent%2F729941-owl-penny-cd-release-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SORRY%20LOUNGE%20AND%20BALLROOM%20CLOSED%20TODAY%22%2C%22href%22%3A%22%2Fevent%2F743939-sorry-lounge-ballroom-closed-phoenix%2F%22%7D%2C%7B%22text%22%3A%22MARKY%20RAMONE%20IN%20CONVERSATION%20WITH%20THE%20ARIZONA%20REPUBLIC%27S%20ED%20MASLEY%22%2C%22href%22%3A%22%2Fevent%2F743177-marky-ramone-in-conversation-phoenix%2F%22%7D%2C%7B%22text%22%3A%22TINA%20ESTES%22%2C%22href%22%3A%22%2Fevent%2F751495-tina-estes-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SASQUANAUT%22%2C%22href%22%3A%22%2Fevent%2F743361-sasquanaut-phoenix%2F%22%7D%2C%7B%22text%22%3A%22LLUVIA%20FLAMENCA%202015%22%2C%22href%22%3A%22%2Fevent%2F738259-lluvia-flamenca-2015-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22LIFE%27S%20A%20DRAG.%20PARTY%20LIKE%20A%20QUEEN%5C%22%22%2C%22href%22%3A%22%2Fevent%2F745897-lifes-drag-party-like-phoenix%2F%22%7D%2C%7B%22text%22%3A%22ROB%20ZABRECKY%22%2C%22href%22%3A%22%2Fevent%2F723571-rob-zabrecky-phoenix%2F%22%7D%2C%7B%22text%22%3A%22MARCHFOURTH%20MARCHING%20BAND%22%2C%22href%22%3A%22%2Fevent%2F707101-marchfourth-marching-band-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DJ%20MY%20FUNERAL%22%2C%22href%22%3A%22%2Fevent%2F745929-dj-my-funeral-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747075-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748971-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20PROWLING%20KIND%22%2C%22href%22%3A%22%2Fevent%2F750387-prowling-kind-phoenix%2F%22%7D%2C%7B%22text%22%3A%22HELMS%20ALEE%20%2F%20MARRIAGES%22%2C%22href%22%3A%22%2Fevent%2F736553-helms-alee-marriages-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22MOTOWN%20ON%20MONDAYS%5C%22%20WITH%20DJ%20TRICKY%20T%2C%20PICKSTER%20%26%20M2.%20HOSTED%20BY%20Q.%20WITH%20LIVE%20ART%20BY%20DUMP...%22%2C%22href%22%3A%22%2Fevent%2F745275-motown-on-mondays-dj-tricky-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20GREAT%20WHISK(E)Y%20BOWL%20DEBATE%20*GUARANTEED%20ENTRY%20%2F%20VIP%20SEATING**%22%2C%22href%22%3A%22%2Fevent%2F743171-great-whisk-e-y-bowl-debate-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20GREAT%20WHISK(E)Y%20BOWL%20DEBATE%22%2C%22href%22%3A%22%2Fevent%2F743173-great-whisk-e-y-bowl-debate-phoenix%2F%22%7D%2C%7B%22text%22%3A%22JARED%20%26%20THE%20MILL%22%2C%22href%22%3A%22%2Fevent%2F751221-jared-mill-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SUNDRESSED%22%2C%22href%22%3A%22%2Fevent%2F744365-sundressed-phoenix%2F%22%7D%2C%7B%22text%22%3A%22MR.%20MUDD%20%26%20MR.%20GOLD%22%2C%22href%22%3A%22%2Fevent%2F744907-mr-mudd-mr-gold-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22LIFE%27S%20A%20DRAG.%20PARTY%20LIKE%20A%20QUEEN%5C%22%22%2C%22href%22%3A%22%2Fevent%2F745899-lifes-drag-party-like-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DJ%20MY%20FUNERAL%22%2C%22href%22%3A%22%2Fevent%2F745933-dj-my-funeral-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747077-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748973-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SUPER%20BOWL%20PARTY%20-%20%5C%22HAMMS%20ME%20THE%20BALL%20!!!%5C%22%22%2C%22href%22%3A%22%2Fevent%2F746337-super-bowl-party-hamms-me-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20VON%20TRAPPS%22%2C%22href%22%3A%22%2Fevent%2F733653-von-trapps-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22MOTOWN%20ON%20MONDAYS%5C%22%20WITH%20DJ%20TRICKY%20T%2C%20PICKSTER%20%26%20M2.%20HOSTED%20BY%20Q.%20WITH%20LIVE%20ART%20BY%20DUMP...%22%2C%22href%22%3A%22%2Fevent%2F745277-motown-on-mondays-dj-tricky-phoenix%2F%22%7D%2C%7B%22text%22%3A%22JUKEBOX%20THE%20GHOST%22%2C%22href%22%3A%22%2Fevent%2F710615-jukebox-ghost-phoenix%2F%22%7D%2C%7B%22text%22%3A%22GENERATIONALS%22%2C%22href%22%3A%22%2Fevent%2F725227-generationals-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DAX%20RIGGS%22%2C%22href%22%3A%22%2Fevent%2F736687-dax-riggs-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22LIFE%27S%20A%20DRAG.%20PARTY%20LIKE%20A%20QUEEN%5C%22%22%2C%22href%22%3A%22%2Fevent%2F745905-lifes-drag-party-like-phoenix%2F%22%7D%2C%7B%22text%22%3A%22ZOLA%20JESUS%22%2C%22href%22%3A%22%2Fevent%2F720751-zola-jesus-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DJ%20MY%20FUNERAL%22%2C%22href%22%3A%22%2Fevent%2F745935-dj-my-funeral-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747079-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22ISRAEL%20NASH%20%2F%20DRY%20RIVER%20YACHT%20CLUB%22%2C%22href%22%3A%22%2Fevent%2F736713-israel-nash-dry-river-yacht-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748977-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22MURDER%20BY%20DEATH%22%2C%22href%22%3A%22%2Fevent%2F713089-murder-by-death-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22MOTOWN%20ON%20MONDAYS%5C%22%20WITH%20DJ%20TRICKY%20T%2C%20PICKSTER%20%26%20M2.%20HOSTED%20BY%20Q.%20WITH%20LIVE%20ART%20BY%20DUMP...%22%2C%22href%22%3A%22%2Fevent%2F745279-motown-on-mondays-dj-tricky-phoenix%2F%22%7D%2C%7B%22text%22%3A%22LILY%20%26%20MADELEINE%22%2C%22href%22%3A%22%2Fevent%2F736731-lily-madeleine-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SAINTS%20OF%20VALORY%22%2C%22href%22%3A%22%2Fevent%2F738027-saints-valory-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20GROWLERS%22%2C%22href%22%3A%22%2Fevent%2F738479-growlers-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22LIFE%27S%20A%20DRAG.%20PARTY%20LIKE%20A%20QUEEN%5C%22%22%2C%22href%22%3A%22%2Fevent%2F745909-lifes-drag-party-like-phoenix%2F%22%7D%2C%7B%22text%22%3A%22OLD%20SCHOOL%20-%2090S%20R%26B%20AND%20HIP%20HOP%20DANCE%20PARTY%22%2C%22href%22%3A%22%2Fevent%2F751749-old-school-90s-r-b-hip-hop-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DJ%20MY%20FUNERAL%22%2C%22href%22%3A%22%2Fevent%2F745937-dj-my-funeral-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747085-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748985-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20DODOS%22%2C%22href%22%3A%22%2Fevent%2F713145-dodos-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DR.%20DOG%22%2C%22href%22%3A%22%2Fevent%2F707669-dr-dog-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DR.%20DOG%22%2C%22href%22%3A%22%2Fevent%2F707673-dr-dog-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22MOTOWN%20ON%20MONDAYS%5C%22%20WITH%20DJ%20TRICKY%20T%2C%20PICKSTER%20%26%20M2.%20HOSTED%20BY%20Q.%20WITH%20LIVE%20ART%20BY%20DUMP...%22%2C%22href%22%3A%22%2Fevent%2F745281-motown-on-mondays-dj-tricky-phoenix%2F%22%7D%2C%7B%22text%22%3A%22LOTUS%22%2C%22href%22%3A%22%2Fevent%2F713557-lotus-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22LIFE%27S%20A%20DRAG.%20PARTY%20LIKE%20A%20QUEEN%5C%22%22%2C%22href%22%3A%22%2Fevent%2F745911-lifes-drag-party-like-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SCOTT%20H.%20BIRAM%22%2C%22href%22%3A%22%2Fevent%2F734049-scott-h-biram-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DJ%20MY%20FUNERAL%22%2C%22href%22%3A%22%2Fevent%2F745939-dj-my-funeral-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747087-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748981-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22CURSIVE%22%2C%22href%22%3A%22%2Fevent%2F703037-cursive-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22MOTOWN%20ON%20MONDAYS%5C%22%20WITH%20DJ%20TRICKY%20T%2C%20PICKSTER%20%26%20M2.%20HOSTED%20BY%20Q.%20WITH%20LIVE%20ART%20BY%20DUMP...%22%2C%22href%22%3A%22%2Fevent%2F745283-motown-on-mondays-dj-tricky-phoenix%2F%22%7D%2C%7B%22text%22%3A%22TIG%20NOTARO%20-%20BOYISH%20GIRL%20INTERRUPTED%22%2C%22href%22%3A%22%2Fevent%2F737949-tig-notaro-boyish-girl-phoenix%2F%22%7D%2C%7B%22text%22%3A%22GREGORY%20ALAN%20ISAKOV%22%2C%22href%22%3A%22%2Fevent%2F741349-gregory-alan-isakov-phoenix%2F%22%7D%2C%7B%22text%22%3A%22COLD%20WAR%20KIDS%22%2C%22href%22%3A%22%2Fevent%2F703061-cold-war-kids-phoenix%2F%22%7D%2C%7B%22text%22%3A%22%5C%22LIFE%27S%20A%20DRAG.%20PARTY%20LIKE%20A%20QUEEN%5C%22%22%2C%22href%22%3A%22%2Fevent%2F745913-lifes-drag-party-like-phoenix%2F%22%7D%2C%7B%22text%22%3A%22BAD%20SUNS%22%2C%22href%22%3A%22%2Fevent%2F720713-bad-suns-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DJ%20MY%20FUNERAL%22%2C%22href%22%3A%22%2Fevent%2F745941-dj-my-funeral-phoenix%2F%22%7D%2C%7B%22text%22%3A%22FLAMENCO%20POR%20LA%20VIDA%22%2C%22href%22%3A%22%2Fevent%2F747089-flamenco-por-la-vida-phoenix%2F%22%7D%2C%7B%22text%22%3A%22KISMET.%20WITH%20SEAN%20WATSON%22%2C%22href%22%3A%22%2Fevent%2F748983-kismet-sean-watson-phoenix%2F%22%7D%2C%7B%22text%22%3A%22DEVOUR%20PHOENIX%E2%80%99S%206TH%20ANNUAL%20BARTENDING%20COMPETITION%22%2C%22href%22%3A%22%2Fevent%2F750397-devour-phoenix-s-6th-annual-phoenix%2F%22%7D%2C%7B%22text%22%3A%22CRAFT%20SPELLS%22%2C%22href%22%3A%22%2Fevent%2F736877-craft-spells-phoenix%2F%22%7D%2C%7B%22text%22%3A%22ELECTRIC%20SIX%22%2C%22href%22%3A%22%2Fevent%2F732565-electric-six-phoenix%2F%22%7D%2C%7B%22text%22%3A%22JOSHUA%20RADIN%22%2C%22href%22%3A%22%2Fevent%2F699899-joshua-radin-phoenix%2F%22%7D%2C%7B%22text%22%3A%22MISTERWIVES%22%2C%22href%22%3A%22%2Fevent%2F736943-misterwives-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THIS%20WILL%20DESTROY%20YOU%22%2C%22href%22%3A%22%2Fevent%2F734097-this-will-destroy-you-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20REVEREND%20PEYTON%27S%20BIG%20DAMN%20BAND%22%2C%22href%22%3A%22%2Fevent%2F743985-reverend-peytons-big-damn-phoenix%2F%22%7D%2C%7B%22text%22%3A%22STARS%22%2C%22href%22%3A%22%2Fevent%2F718679-stars-phoenix%2F%22%7D%2C%7B%22text%22%3A%22NORTH%20MISSISSIPPI%20ALLSTARS%20%26%20ANDERS%20OSBORNE%20PRESENT%20N.M.O.%22%2C%22href%22%3A%22%2Fevent%2F735579-north-mississippi-allstars-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SHLOHMO%22%2C%22href%22%3A%22%2Fevent%2F736819-shlohmo-phoenix%2F%22%7D%2C%7B%22text%22%3A%22JARABE%20DE%20PALO%22%2C%22href%22%3A%22%2Fevent%2F731021-jarabe-de-palo-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SWANS%22%2C%22href%22%3A%22%2Fevent%2F747947-swans-phoenix%2F%22%7D%2C%7B%22text%22%3A%22SYLVAN%20ESSO%22%2C%22href%22%3A%22%2Fevent%2F712891-sylvan-esso-phoenix%2F%22%7D%2C%7B%22text%22%3A%22CLARK%20%2F%20NOSAJ%20THING%22%2C%22href%22%3A%22%2Fevent%2F738183-clark-nosaj-thing-phoenix%2F%22%7D%2C%7B%22text%22%3A%22THE%20MOWGLI%27S%22%2C%22href%22%3A%22%2Fevent%2F730677-mowglis-phoenix%2F%22%7D%5D">
+<body>
+	<table border="1" cellspacing="0" cellpadding="1">
+		<thead>
+			<tr>
+				<th>Headliner</th>
+				<th>Supports</th>
+				<th colspan="2">Date / Time</th>
+			</tr>
+		</thead>
+		<tbody><!-- generated content --></tbody>
+	</table>
 
-	<table border="1" cellspacing="0" cellpadding="1"></table>
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="jquery.min.js"></script>
 	<script type="text/javascript">
-		// Production steps of ECMA-262, Edition 5, 15.4.4.18
-		// Reference: http://es5.github.io/#x15.4.4.18
-		if (!Array.prototype.forEach) {
+		var $table = $('table tbody');
 
-		  Array.prototype.forEach = function(callback, thisArg) {
+		$.get('calendar.html', function parseShows(data) {
+			var $response = $(data),
+				headliners;
 
-			var T, k;
+			$response = $response.find('.tfly-calendar');
 
-			if (this == null) {
-			  throw new TypeError(' this is null or not defined');
-			}
+			headliners = $response.find('.headliners').map(function (idx, headlineEl) {
+				var $headlineEl = $(headlineEl);
 
-			// 1. Let O be the result of calling ToObject passing the |this| value as the argument.
-			var O = Object(this);
+				return {
+					headline: $headlineEl.text(),
+					href: 'http://www.crescentphx.com' + $headlineEl.find('a').attr('href'),
+					date: $headlineEl.parents('td').find('h5').text(),
+					startTime: $headlineEl.siblings('.start-time').text(),
+					supports: $headlineEl
+						.siblings('.description')
+							.find('.supports')
+							.map(function (idx, supportEl) {
+								return $(supportEl).find('a').text();
+							})
+				};
+			});
 
-			// 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
-			// 3. Let len be ToUint32(lenValue).
-			var len = O.length >>> 0;
-
-			// 4. If IsCallable(callback) is false, throw a TypeError exception.
-			// See: http://es5.github.com/#x9.11
-			if (typeof callback !== "function") {
-			  throw new TypeError(callback + ' is not a function');
-			}
-
-			// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-			if (arguments.length > 1) {
-			  T = thisArg;
-			}
-
-			// 6. Let k be 0
-			k = 0;
-
-			// 7. Repeat, while k < len
-			while (k < len) {
-
-			  var kValue;
-
-			  // a. Let Pk be ToString(k).
-			  //   This is implicit for LHS operands of the in operator
-			  // b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.
-			  //   This step can be combined with c
-			  // c. If kPresent is true, then
-			  if (k in O) {
-
-				// i. Let kValue be the result of calling the Get internal method of O with argument Pk.
-				kValue = O[k];
-
-				// ii. Call the Call internal method of callback with T as the this value and
-				// argument list containing kValue, k, and O.
-				callback.call(T, kValue, k, O);
-			  }
-			  // d. Increase k by 1.
-			  k++;
-			}
-			// 8. return undefined
-		  };
-		}
-	</script>
-
-	<script type="text/javascript">
-		var $table = $('table');
-		var shows = $('body').data('shows');
-		shows = decodeURIComponent(shows);
-		shows = JSON.parse(shows);
-		// document.write(shows);
-
-		shows.forEach(function (element, index, array) {
-			var cell = $('<tr><td>' + element.text + '</td><td><a href="http://www.crescentphx.com' + element.href + '">link</a></td></tr>');
-			$table.append(cell);
-		});
-
-		$.get('http://www.crescentphx.com/calendar/', function(data) {
-			console.log(data);
+			headliners.each(function (idx, showData) {
+				var $row = $('<tr><td><a href="' + showData.href + '">' + showData.headline + '</a>' +
+					'</td><td>' + showData.supports.toArray().join(',<br>') +
+					'</td><td>' + showData.date +
+					'</td><td>' + showData.startTime +
+					'</td></tr>');
+				$table.append($row);
+			});
 		});
 	</script>
 </body>
 </html>
-
-<!--
-http://www.crescentphx.com/calendar/
-var headliners = [];
-jQuery('.headliners').each(function (i, e) { headliners.push({text: e.innerText, href: jQuery(e).find('a').attr('href')}); });
--->
