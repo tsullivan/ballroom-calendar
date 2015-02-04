@@ -4,42 +4,14 @@
 	<meta charset="UTF-8">
 	<title>shows</title>
 	<style type="text/css">
-		body {
-			font-family: Verdana;
-			background-color: rgba(26, 83, 94, 0.55) ;
-		}
-		table {
-			background-color: white;
-			width: 95%;
-			margin: 0 auto;
-		}
-		tr {
-			border-bottom: 0.3em;
-		}
-		thead th {
-			background-color: rgba(43, 51, 53, 0.98) ;
-			color: #efefef;
-		}
-		tbody tr:hover {
-			background-color: #efefef;
-		}
-		td {
-			vertical-align: top;
-			padding: 0.1em 0.3em;
-		}
-		td:nth-child(1),
-		td:nth-child(2) {
-			text-align: center;
-		}
-		td:nth-child(3),
-		td:nth-child(4) {
-			text-align: right;
-		}
-		a {
-			text-decoration: none;
-			font-weight: bold;
-			color: rgb(30, 20, 166);
-		}
+		body { font-family: Verdana; background-color: rgba(26, 83, 94, 0.55) ; }
+		table { background-color: white; width: 95%; margin: 0 auto; }
+		tr { border-bottom: 0.3em; }
+		thead th { background-color: rgba(43, 51, 53, 0.98) ; color: #efefef; }
+		tbody tr:hover { background-color: #efefef; }
+		td { vertical-align: top; padding: 0.1em 0.3em; }
+		a { text-decoration: none; color: rgb(30, 20, 166); }
+		a:active, a:focus { text-decoration: underline; }
 	</style>
 </head>
 <body>
@@ -47,8 +19,7 @@
 		<thead>
 			<tr>
 				<th>Headliner</th>
-				<th>Supports</th>
-				<th colspan="2">Date / Time</th>
+				<th colspan="2">Date</th>
 			</tr>
 		</thead>
 		<tbody><!-- generated content --></tbody>
@@ -65,10 +36,14 @@
 			$response = $response.find('.tfly-calendar');
 
 			headliners = $response.find('.headliners').map(function (idx, headlineEl) {
-				var $headlineEl = $(headlineEl);
+				var $headlineEl = $(headlineEl),
+					artistName = $headlineEl.text();
 
 				return {
-					headline: $headlineEl.text(),
+					headline: {
+						artist: artistName,
+						youtube: 'https://www.youtube.com/results?search_query=' + artistName
+					},
 					href: 'http://www.crescentphx.com' + $headlineEl.find('a').attr('href'),
 					date: $headlineEl.parents('td').find('h5').text(),
 					startTime: $headlineEl.siblings('.start-time').text(),
@@ -76,17 +51,27 @@
 						.siblings('.description')
 							.find('.supports')
 							.map(function (idx, supportEl) {
-								return $(supportEl).find('a').text();
+								var supporterName = $(supportEl).find('a').text();
+								return {
+									artist: supporterName,
+									youtube: 'https://www.youtube.com/results?search_query=' + supporterName
+								};
 							})
 				};
 			});
 
 			headliners.each(function (idx, showData) {
-				var $row = $('<tr><td><a href="' + showData.href + '">' + showData.headline + '</a>' +
-					'</td><td>' + showData.supports.toArray().join(',<br>') +
-					'</td><td>' + showData.date +
-					'</td><td>' + showData.startTime +
-					'</td></tr>');
+				var headliner = '<a href="' + showData.headline.youtube + '" target="_youtube">' + showData.headline.artist + '</a>';
+
+				var supporters = showData.supports
+					.map(function (idx, sup) {
+						return '<a href="' + sup.youtube + '" target="_youtube">' + sup.artist + '</a>';
+					}).toArray().join(', ');
+
+				var link = '<a href="' + showData.href + '" target="_ballroom">' + showData.date + ' ' + showData.startTime + '</a>';
+
+				var $row = $('<tr><td>' + headliner + '<div>' + supporters + '</div></td><td>' + link + '</td></tr>');
+
 				$table.append($row);
 			});
 		});
