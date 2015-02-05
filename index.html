@@ -12,6 +12,7 @@
 		td { vertical-align: top; padding: 0.1em 0.3em; }
 		a { text-decoration: none; color: rgb(30, 20, 166); }
 		a:active, a:focus { text-decoration: underline; }
+		.headliner { font-weight: bold; }
 	</style>
 </head>
 <body>
@@ -31,6 +32,8 @@
 
 		$.get('calendar.html', function parseShows(data) {
 			var $response = $(data),
+				youtubeQueryBase = 'https://www.youtube.com/results?search_query=',
+				statesideBase = 'http://www.statesidepresents.com',
 				headliners;
 
 			$response = $response.find('.tfly-calendar');
@@ -42,9 +45,10 @@
 				return {
 					headline: {
 						artist: artistName,
-						youtube: 'https://www.youtube.com/results?search_query=' + artistName
+						youtube: youtubeQueryBase + artistName
 					},
-					href: 'http://www.crescentphx.com' + $headlineEl.find('a').attr('href'),
+					venue: $headlineEl.parents('.one-event').find('.venue').text(),
+					href: statesideBase + $headlineEl.find('a').attr('href'),
 					date: $headlineEl.parents('td').find('h5').text(),
 					startTime: $headlineEl.siblings('.start-time').text(),
 					supports: $headlineEl
@@ -54,23 +58,26 @@
 								var supporterName = $(supportEl).find('a').text();
 								return {
 									artist: supporterName,
-									youtube: 'https://www.youtube.com/results?search_query=' + supporterName
+									youtube: youtubeQueryBase + supporterName
 								};
 							})
 				};
 			});
 
 			headliners.each(function (idx, showData) {
-				var headliner = '<a href="' + showData.headline.youtube + '" target="_youtube">' + showData.headline.artist + '</a>';
+				var headliner = '<a href="' + showData.headline.youtube + '" class="headliner" target="_youtube">' + showData.headline.artist + '</a>';
 
 				var supporters = showData.supports
 					.map(function (idx, sup) {
 						return '<a href="' + sup.youtube + '" target="_youtube">' + sup.artist + '</a>';
 					}).toArray().join(', ');
 
-				var link = '<a href="' + showData.href + '" target="_ballroom">' + showData.date + ' ' + showData.startTime + '</a>';
+				var link = '<a href="' + showData.href + '" target="_venue">' + showData.date + ' ' + showData.startTime + '</a>';
 
-				var $row = $('<tr><td>' + headliner + '<div>' + supporters + '</div></td><td>' + link + '</td></tr>');
+				var $row = $('<tr><td>' + headliner +
+						'<div>' + supporters +
+						'</div><div>' + showData.venue +
+						'</div></td><td>' + link + '</td></tr>');
 
 				$table.append($row);
 			});
